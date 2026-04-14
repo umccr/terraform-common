@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "cecb4f71db7b129fdebd90ed45d05f3a98fc6475",
+  "separate-pull-requests": true,
+  "tag-separator": "/",
+  "packages": {
+    "modules/aws-seqera-iam-setup": {
+      "release-type": "simple",
+      "component": "aws-seqera-iam-setup",
+      "changelog-path": "CHANGELOG.md",
+      "bump-minor-pre-major": true
+    }
+  }
+}
