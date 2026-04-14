@@ -5,7 +5,7 @@
   "tag-separator": "/",
   "packages": {
     "modules/aws-seqera-iam-setup": {
-      "release-type": "simple",
+      "release-type": "terraform-module",
       "component": "aws-seqera-iam-setup",
       "changelog-path": "CHANGELOG.md",
       "bump-minor-pre-major": true

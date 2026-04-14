@@ -230,14 +230,6 @@ resource "aws_iam_policy" "batch_forge_policy" {
         Resource = "*"
       }, */
 
-      # https://docs.seqera.io/platform-enterprise/compute-envs/aws-batch#fsx-file-systems-optional
-      # Seqera can manage AWS FSx file systems, if needed by the pipelines.
-      #
-      # This section of the policy is optional and can be omitted if FSx file systems are not used
-      # by your pipelines. The describe actions cannot be restricted to specific resources, so permission
-      # to operate on any resource * must be granted. The management actions can be restricted
-      # to specific resources, like in the example below.
-
       # https://docs.seqera.io/platform-enterprise/compute-envs/aws-batch#pipeline-secrets-optional
       # Seqera can synchronize pipeline secrets defined on the Platform workspace with AWS Secrets
       # Manager, which requires additional permissions on the IAM user. If you do not plan to
@@ -285,6 +277,11 @@ resource "aws_iam_policy" "batch_forge_policy" {
     ] : [],
     # https://docs.seqera.io/platform-enterprise/compute-envs/aws-batch#fsx-file-systems-optional
     # Seqera can manage AWS FSx Lustre file systems, if needed by the pipelines.
+    #
+    # This section of the policy is optional and can be omitted if FSx file systems are not used
+    # by your pipelines. The describe actions cannot be restricted to specific resources, so permission
+    # to operate on any resource * must be granted. The management actions can be restricted
+    # to specific resources, like in the example below.
     var.enable_fsx_lustre ? [
       {
         Sid    = "OptionalFSXManagementCanBeRestricted"
