@@ -1,4 +1,4 @@
 {
   "modules/aws-seqera-iam-setup": "0.1.0",
-  "modules/cloudtrail-parquet-lambda": "0.1.0"
+  "modules/cloudtrail-parquet-lambda": "0.2.0"
 }
