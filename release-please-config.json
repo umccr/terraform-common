@@ -9,6 +9,12 @@
       "component": "aws-seqera-iam-setup",
       "changelog-path": "CHANGELOG.md",
       "bump-minor-pre-major": true
+    },
+    "modules/cloudtrail-parquet-lambda": {
+      "release-type": "terraform-module",
+      "component": "cloudtrail-parquet-lambda",
+      "changelog-path": "CHANGELOG.md",
+      "bump-minor-pre-major": true
     }
   }
 }
