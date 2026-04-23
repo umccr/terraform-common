@@ -9,11 +9,10 @@ converts CloudTrail events to Parquet format and stores them in S3.
 module "cloudtrail_parquet_lambda" {
   source = "git::https://github.com/umccr/terraform-common.git//modules/cloudtrail-parquet-lambda?ref=cloudtrail-parquet-lambda/v0.1.0"
 
-  name       = "cloudtrail-parquet-lambda"
   aws_region = "ap-southeast-2"
 
   ghcr_repo = "ghcr.io/umccr/cloudtrail-parquet-lambda"
-  ghcr_tag  = "sha-7a64c06"
+  ghcr_tag  = "2.0.0"
 
   cloudtrail_base_input_path  = "s3://${aws_s3_bucket.cloudtrail_root.id}/"
   cloudtrail_base_output_path = "s3://${aws_s3_bucket.cloudtrail_root.id}/"

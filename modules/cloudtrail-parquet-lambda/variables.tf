@@ -1,6 +1,7 @@
 variable "name" {
   description = "Base name for all resources"
   type        = string
+  default = "cloudtrail-parquet-lambda"
 }
 
 variable "aws_region" {
